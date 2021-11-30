@@ -21,8 +21,7 @@ pipeline {
         }
         stage('Deploment') {
             steps {
-                sh 'chmod +x deploy.sh'
-                sh './deploy.sh'
+                sh 'sudo cp target/JenkinsWar.war /var/lib/tomcat9/webapps/'
             }
         }
     }
